@@ -15,7 +15,7 @@ function converteMoeda() {
         cifrao.innerHTML = "USD";
 
         //convertendo real para dólar
-        let valorDolar = valorReal / 5.15;
+        let valorDolar = valorReal / 5.31;
         //selecionando a div com o id "valor-moeda"
         let moeda = document.getElementById("valor-moeda");
         //atualiza o value da div selecionada
