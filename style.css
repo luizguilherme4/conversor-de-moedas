@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito';
+    font-style: normal;
+}
+
+header,
+footer {
+    display: flex;
+    height: 10vh;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.container-header-1 {
+    background-color: #FEFEE3;
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+#header-text,
+.footer-text {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+#header-text {
+    color: #2C6E49;
+}
+
+.container-header-2 {
+    background-color: #2C6E49;
+    width: 50%;
+}
+
+.container-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh;
+}
+
+.rectangle-left,
+.rectangle-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    height: 100%;
+}
+
+.container-top-left,
+.container-top-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+.container-top-left {
+    background-color: #FEFEE3;
+}
+
+#mensagem-top-left,
+#mensagem-top-right,
+#reais-string,
+#moeda-string {
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+#mensagem-top-left,
+#moeda-string {
+    color: #2C6E49;
+}
+
+#reais-string,
+#mensagem-top-right {
+    color: #FEFEE3;
+}
+
+#icon-brasil,
+#icon-usa {
+    width: 2rem;
+}
+
+.moeda-real,
+.moedas {
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+
+.moeda-real {
+    background-color: #2C6E49;
+    width: 9rem;
+    justify-content: space-around;
+}
+
+.container-down-left,
+.container-down-right {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 50%;
+}
+
+.container-down-left {
+    background-color: #FEFEE3;
+}
+
+#cifrao-left,
+#cifrao-right {
+    font-weight: 900;
+    font-size: 5rem;
+}
+
+#cifrao-left {
+    color: #2C6E49;
+}
+
+#valor-real,
+#valor-moeda {
+    min-width: 5rem;
+    max-width: 23.5rem;
+    height: 7rem;
+    font-weight: 900;
+    font-size: 5rem;
+    outline: none;
+    border: none;
+    text-decoration: underline;
+    text-align: center;
+}
+
+#valor-real {
+    background-color: #FEFEE3;
+    color: #2C6E49;
+}
+
+.container-top-right {
+    background-color: #2C6E49;
+}
+
+.moedas {
+    background-color: #FEFEE3;
+    justify-content: center;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.moedas:hover {
+    filter: opacity(0.8);
+}
+
+.container-down-right {
+    background-color: #2C6E49;
+}
+
+#cifrao-right {
+    color: #FEFEE3;
+}
+
+#valor-moeda {
+    background-color: #2C6E49;
+    color: #FEFEE3;
+}
+
+.container-footer-1 {
+    background-color: #FEFEE3;
+    width: 50%;
+}
+
+.container-footer-2 {
+    background-color: #2C6E49;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+}
+
+.footer-text {
+    color: #FEFEE3;
+}
+
+#footer-text-name {
+    margin-right: 1rem;
+}
+
+#icon-coracao,
+#icon-logo {
+    width: 1rem;
+    margin: 1rem;
+}
+
+@media (max-width: 1024px),
+(max-height: 500px) {
+
+    #mensagem-top-left,
+    #mensagem-top-right,
+    #reais-string,
+    #moeda-string {
+        font-weight: 500;
+        font-size: 1rem;
+        margin-left: 1rem;
+    }
+
+    #cifrao-left,
+    #cifrao-right,
+    #valor-real,
+    #valor-moeda {
+        font-weight: 700;
+        font-size: 1rem;
+        margin-left: 1rem;
+    }
+
+    #valor-real,
+    #valor-moeda {
+        height: 1rem;
+    }
+    
+    .footer-text {
+        margin-left: 1rem;
+    }
+}
