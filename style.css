@@ -204,6 +204,10 @@ body {
 @media (max-width: 1024px),
 (max-height: 500px) {
 
+    .container-top-left, .container-top-right {
+        flex-direction: column;
+    }
+
     #mensagem-top-left,
     #mensagem-top-right,
     #reais-string,
