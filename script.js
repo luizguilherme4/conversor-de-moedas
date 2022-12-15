@@ -1,44 +1,68 @@
-//seleciona a div com id "valor-real"
-let real = document.getElementById("valor-real");
-//seleciona a div com id "moeda-string"
-let moeda = document.getElementById("moeda-string");
-//seleciona a div com id "cifrao-right"
-let cifrao = document.getElementById("cifrao-right");
+var valueRight = document.querySelector("#value-right");
+var coinLeft = document.querySelector("#coinLeft");
+var coinRight = document.querySelector("#coinRight");
+var symbolLeft = document.querySelector("#symbol-left");
+var symbolRight = document.querySelector("#symbol-right");
 
-function converteMoeda() {
-    //seleciona o valor do id "moeda-string"
-    let valorMoeda = moeda.value;
-    //convertendo real para um valor numérico
-    let valorReal = parseFloat(real.value);
+function convert() {
+    var valueInput = document.querySelector("#value-left").value;
 
-    if (valorMoeda == "dolar") {
-        cifrao.innerHTML = "USD";
+    if (coinLeft.value == "real") {
+        symbolLeft.innerHTML = "R$";
 
-        //convertendo real para dólar
-        let valorDolar = valorReal / 5.31;
-        //selecionando a div com o id "valor-moeda"
-        let moeda = document.getElementById("valor-moeda");
-        //atualiza o value da div selecionada
-        moeda.value = valorDolar.toFixed(2);
-    }
-    if (valorMoeda == "libra") {
-        cifrao.innerHTML = "GBP";
+        switch (coinRight.value) {
+            case "dolar":
+                valueRight.value = (valueInput / 5.31).toFixed(2);
+                symbolRight.innerHTML = "USD";
+                break;
 
-        //convertendo real para libra
-        let valorLibra = valorReal / 6;
-        //selecionando a div com o id "valor-moeda"
-        let moeda = document.getElementById("valor-moeda");
-        //atualiza o value da div selecionada
-        moeda.value = valorLibra.toFixed(2);
-    }
-    if (valorMoeda == "euro") {
-        cifrao.innerHTML = "EUR";
+            case "euro":
+                valueRight.value = (valueInput / 5.64).toFixed(2);
+                symbolRight.innerHTML = "EUR";
+                break;
 
-        //convertendo real para euro
-        let valorEuro = valorReal / 5.2;
-        //selecionando a div com o id "valor-moeda"
-        let moeda = document.getElementById("valor-moeda");
-        //atualiza o value da div selecionada
-        moeda.value = valorEuro.toFixed(2);
+            case "real":
+                valueRight.value = valueInput;
+                symbolRight.innerHTML = "R$";
+                break;
+        }
+    } else if (coinLeft.value == "dolar") {
+        symbolLeft.innerHTML = "USD";
+
+        switch (coinRight.value) {
+            case "dolar":
+                valueRight.value = valueInput;
+                symbolRight.innerHTML = "USD";
+                break;
+
+            case "euro":
+                valueRight.value = (valueInput / 1.06).toFixed(2);
+                symbolRight.innerHTML = "EUR";
+                break;
+
+            case "real":
+                valueRight.value = (valueInput * 5.31).toFixed(2);
+                symbolRight.innerHTML = "R$";
+                break;
+        }
+    } else {
+        symbolLeft.innerHTML = "EUR";
+
+        switch (coinRight.value) {
+            case "dolar":
+                valueRight.value = (valueInput * 1.06).toFixed(2);
+                symbolRight.innerHTML = "USD";
+                break;
+
+            case "euro":
+                valueRight.value = valueInput;
+                symbolRight.innerHTML = "EUR";
+                break;
+
+            case "real":
+                valueRight.value = (valueInput * 5.64).toFixed(2);
+                symbolRight.innerHTML = "R$";
+                break;
+        }
     }
 }
