@@ -2,6 +2,7 @@
 <html lang="pt-br">
 
 <head>
+    <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,61 +10,67 @@
     <title>Conversor de Moedas</title>
 </head>
 
-<header>
-    <div class="container-header-1">
-        <img src="img\iconLogo.svg" alt="icon-logo" id="icon-logo">
-        <p id="header-text">conversor de moedas</p>
-    </div>
-    <div class="container-header-2"></div>
-</header>
-
-<body>
-    <div class="container-main">
-        <div class="rectangle-left">
-            <div class="container-top-left">
-                <h2 id="mensagem-top-left">Digite o valor em </h2>
-                <div class="moeda-real">
-                    <h2 id="reais-string"> Reais </h2>
-                    <img src="img\iconBandeiraBrasil.svg" alt="icon-bandeira-brasil" id="icon-brasil">
-                </div>
-            </div>
-            <div class="container-down-left">
-                <h1 id="cifrao-left">R$</h1>
-                <input type="number" id="valor-real" oninput="converteMoeda()">
-            </div>
+<main>
+    <section class="right-container white-bg">
+        <div class="header">
+            <img src="/img/iconLogo.svg" alt="logo">
+            <p class="green-text">conversor de moedas</p>
         </div>
 
-        <div class="rectangle-right">
-            <div class="container-top-right">
-                <h2 id="mensagem-top-right">Esse é o valor em </h2>
-                <select class="moedas" id="moeda-string" onclick="converteMoeda()">
-                    <option value="dolar" imgBrasil>
-                        Dólar
+        <div class="right-coin">
+            <div class="select-coin">
+                <h1 class="green-text">Digite o valor em</h1>
+                <select name="coins" class="white-text green-bg">
+                    <option value="real">
+                        Real
                     </option>
-                    <option value="libra">
-                        Libra
+                    <option value="dolar">
+                        Dólar
                     </option>
                     <option value="euro">
                         Euro
                     </option>
                 </select>
             </div>
-            <div class="container-down-right">
-                <h1 id="cifrao-right">USD</h1>
-                <input type="number" id="valor-moeda">
+
+            <div class="input-coin">
+                <h2 class="green-text">R$</h2>
+                <input class="green-text white-bg" type="number" autofocus placeholder="0">
             </div>
         </div>
-    </div>
-</body>
+    </section>
 
-<footer>
-    <div class="container-footer-1"></div>
-    <div class="container-footer-2">
-        <p class="footer-text">feito com </p>
-        <img src="img\iconCoracao.svg" alt="icon-coracao" id="icon-coracao">
-        <p class="footer-text" id="footer-text-name"> por Luiz</p>
-    </div>
-</footer>
+    <section class="left-container green-bg">
+        <div class="left-coin">
+            <div class="select-coin">
+                <h1 class="white-text">Digite o valor em</h1>
+                <select name="coins" class="green-text white-bg">
+                    <option value="dolar">
+                        Dólar
+                    </option>
+                    <option value="real">
+                        Real
+                    </option>
+                    <option value="euro">
+                        Euro
+                    </option>
+                </select>
+            </div>
+
+            <div class="input-coin white-placeholder">
+                <h2 class="white-text">USD</h2>
+                <input class="white-text green-bg" type="number" autofocus placeholder="0">
+            </div>
+        </div>
+
+        <footer>
+            <p class="white-text">feito com</p>
+            <img src="/img/iconCoracao.svg" alt="coração ícone">
+            <p class="white-text">por Luiz</p>
+        </footer>
+    </section>
+</main>
+
 <script src="script.js"></script>
 
 </html>

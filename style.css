@@ -7,231 +7,203 @@
     font-style: normal;
 }
 
-header,
-footer {
-    display: flex;
-    height: 10vh;
-}
-
-body {
-    height: 100vh;
+main {
     width: 100vw;
-}
+    height: 100vh;
 
-.container-header-1 {
-    background-color: #FEFEE3;
     display: flex;
-    align-items: center;
+}
+
+section {
     width: 50%;
+    height: 100vh;
 }
 
-#header-text,
-.footer-text {
-    font-weight: 700;
-    font-size: 1rem;
-}
-
-#header-text {
-    color: #2C6E49;
-}
-
-.container-header-2 {
-    background-color: #2C6E49;
-    width: 50%;
-}
-
-.container-main {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80vh;
-}
-
-.rectangle-left,
-.rectangle-right {
+.left-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    width: 50%;
-    height: 100%;
-}
-
-.container-top-left,
-.container-top-right {
-    display: flex;
     justify-content: center;
     align-items: center;
-    height: 50%;
 }
 
-.container-top-left {
-    background-color: #FEFEE3;
+.white-bg {
+    background-color: #FEFEE3
 }
 
-#mensagem-top-left,
-#mensagem-top-right,
-#reais-string,
-#moeda-string {
-    font-weight: 900;
-    font-size: 2rem;
+.green-bg {
+    background-color: #2C6E49;
 }
 
-#mensagem-top-left,
-#moeda-string {
-    color: #2C6E49;
-}
-
-#reais-string,
-#mensagem-top-right {
+.white-text {
     color: #FEFEE3;
 }
 
-#icon-brasil,
-#icon-usa {
-    width: 2rem;
-}
-
-.moeda-real,
-.moedas {
-    display: flex;
-    align-items: center;
-    border-radius: 0.5rem;
-    margin: 1rem;
-}
-
-.moeda-real {
-    background-color: #2C6E49;
-    width: 9rem;
-    justify-content: space-around;
-}
-
-.container-down-left,
-.container-down-right {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 50%;
-}
-
-.container-down-left {
-    background-color: #FEFEE3;
-}
-
-#cifrao-left,
-#cifrao-right {
-    font-weight: 900;
-    font-size: 5rem;
-}
-
-#cifrao-left {
+.green-text {
     color: #2C6E49;
 }
 
-#valor-real,
-#valor-moeda {
-    min-width: 5rem;
-    max-width: 23.5rem;
-    height: 7rem;
+.header {
+    padding: 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+p {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.right-coin,
+.left-coin {
+    width: 100%;
+    height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.left-coin {
+    margin-top: 20px;
+}
+
+.select-coin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+h1 {
     font-weight: 900;
-    font-size: 5rem;
+    font-size: 40px;
+}
+
+select {
+    border-radius: 12px;
+    padding: 4px;
+    font-weight: 900;
+    font-size: 32px;
     outline: none;
+}
+
+select:hover {
+    cursor: pointer;
+    filter: opacity(0.7);
+}
+
+.input-coin {
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    font-weight: 900;
+    font-size: 40px;
+}
+
+input {
+    width: 440px;
+    height: 120px;
+
+    font-weight: 900;
+    font-size: 96px;
+    text-align: right;
+
     border: none;
     text-decoration: underline;
-    text-align: center;
+    outline: none;
 }
 
-#valor-real {
-    background-color: #FEFEE3;
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input::placeholder {
     color: #2C6E49;
 }
 
-.container-top-right {
-    background-color: #2C6E49;
-}
-
-.moedas {
-    background-color: #FEFEE3;
-    justify-content: center;
-    outline: none;
-    border: none;
-    cursor: pointer;
-}
-
-.moedas:hover {
-    filter: opacity(0.8);
-}
-
-.container-down-right {
-    background-color: #2C6E49;
-}
-
-#cifrao-right {
+.white-placeholder input::placeholder {
     color: #FEFEE3;
 }
 
-#valor-moeda {
-    background-color: #2C6E49;
-    color: #FEFEE3;
-}
+footer {
+    width: 100%;
+    height: fit-content;
+    margin-right: 40px;
 
-.container-footer-1 {
-    background-color: #FEFEE3;
-    width: 50%;
-}
-
-.container-footer-2 {
-    background-color: #2C6E49;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 50%;
+    gap: 8px;
 }
 
-.footer-text {
-    color: #FEFEE3;
-}
-
-#footer-text-name {
-    margin-right: 1rem;
-}
-
-#icon-coracao,
-#icon-logo {
-    width: 1rem;
-    margin: 1rem;
-}
-
-@media (max-width: 1024px),
-(max-height: 500px) {
-
-    .container-top-left, .container-top-right {
+@media (max-width: 1023px) {
+    main {
         flex-direction: column;
     }
 
-    #mensagem-top-left,
-    #mensagem-top-right,
-    #reais-string,
-    #moeda-string {
-        font-weight: 500;
-        font-size: 1rem;
-        margin-left: 1rem;
+    section {
+        width: 100vw;
+        height: 50%;
+
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
     }
 
-    #cifrao-left,
-    #cifrao-right,
-    #valor-real,
-    #valor-moeda {
+    .header,
+    footer {
+        justify-content: center;
+        margin-right: 0;
+    }
+
+    footer {
+        margin-bottom: 16px;
+    }
+
+    .header img {
+        width: 24px;
+        height: 24px;
+    }
+
+    p {
         font-weight: 700;
-        font-size: 1rem;
-        margin-left: 1rem;
+        font-size: 16px;
     }
 
-    #valor-real,
-    #valor-moeda {
-        height: 1rem;
+    .right-coin {
+        height: fit-content;
     }
-    
-    .footer-text {
-        margin-left: 1rem;
+
+    h1 {
+        font-weight: 700;
+        font-size: 20px;
     }
+
+    select {
+        font-size: 16px;
+    }
+
+    input {
+        width: 160px;
+        height: 80px;
+
+        font-size: 40px;
+        text-align: center;
+
+    }
+
+    h2 {
+        font-weight: 800;
+        font-size: 32px;
+    }
+
 }
