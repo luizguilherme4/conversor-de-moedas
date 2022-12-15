@@ -20,7 +20,7 @@
         <div class="right-coin">
             <div class="select-coin">
                 <h1 class="green-text">Digite o valor em</h1>
-                <select name="coins" class="white-text green-bg">
+                <select name="coins" class="white-text green-bg" id="coinRight">
                     <option value="real">
                         Real
                     </option>
@@ -35,7 +35,7 @@
 
             <div class="input-coin">
                 <h2 class="green-text">R$</h2>
-                <input class="green-text white-bg" type="number" autofocus placeholder="0">
+                <input class="green-text white-bg" id="value-left" type="number" autofocus placeholder="0" oninput="toRight()">
             </div>
         </div>
     </section>
@@ -44,7 +44,7 @@
         <div class="left-coin">
             <div class="select-coin">
                 <h1 class="white-text">Digite o valor em</h1>
-                <select name="coins" class="green-text white-bg">
+                <select name="coins" class="green-text white-bg" id="coinLeft">
                     <option value="dolar">
                         Dólar
                     </option>
@@ -59,7 +59,7 @@
 
             <div class="input-coin white-placeholder">
                 <h2 class="white-text">USD</h2>
-                <input class="white-text green-bg" type="number" autofocus placeholder="0">
+                <input class="white-text green-bg" id="value-right" type="number" autofocus placeholder="0" oninput="toLeft()">
             </div>
         </div>
 
