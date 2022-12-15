@@ -1,21 +1,25 @@
-var valueLeft = document.querySelector("#value-left");
 var valueRight = document.querySelector("#value-right");
 var coinLeft = document.querySelector("#coinLeft");
 var coinRight = document.querySelector("#coinRight");
+var symbol = document.querySelector("#symbol")
 
-function toRight() {
+function convert() {
+    var valueInput = document.querySelector("#value-left").value;
+
     switch (coinLeft.value) {
         case "dolar":
-            valueRight.value = (valueLeft.value) * 5;
+            valueRight.value = valueInput * 5;
+            symbol.innerHTML = "USD";
             break;
 
         case "euro":
-            valueRight.value = (valueLeft.value) * 10;
+            valueRight.value = valueInput * 10;
+            symbol.innerHTML = "EUR";
             break;
 
         case "real":
-            valueRight.value = (valueLeft.value);
+            valueRight.value = valueInput;
+            symbol.innerHTML = "R$";
             break;
     }
 }
-

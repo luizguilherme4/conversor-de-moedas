@@ -35,7 +35,7 @@
 
             <div class="input-coin">
                 <h2 class="green-text">R$</h2>
-                <input class="green-text white-bg" id="value-left" type="number" autofocus placeholder="0" oninput="toRight()">
+                <input class="green-text white-bg" id="value-left" type="number" autofocus placeholder="0" oninput="convert()">
             </div>
         </div>
     </section>
@@ -43,8 +43,8 @@
     <section class="left-container green-bg">
         <div class="left-coin">
             <div class="select-coin">
-                <h1 class="white-text">Digite o valor em</h1>
-                <select name="coins" class="green-text white-bg" id="coinLeft">
+                <h1 class="white-text">Esse é o valor em</h1>
+                <select name="coins" class="green-text white-bg" id="coinLeft" onclick="convert()">
                     <option value="dolar">
                         Dólar
                     </option>
@@ -58,8 +58,8 @@
             </div>
 
             <div class="input-coin white-placeholder">
-                <h2 class="white-text">USD</h2>
-                <input class="white-text green-bg" id="value-right" type="number" autofocus placeholder="0" oninput="toLeft()">
+                <h2 class="white-text" id="symbol">USD</h2>
+                <input class="white-text green-bg" id="value-right" type="number" disabled placeholder="0">
             </div>
         </div>
 
